@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    cursor: default;
+    overflow: hidden;
+}
+
+#main #navbar {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+}
+
+#navbar #nlft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nlft #logo {
+    width: 90px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    background-color: black;
+}
+
+#nlft #items {
+    margin-left: 50px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    margin-left: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#navbar #ncntr {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ncntr i {
+    font-weight: 900;
+    margin-right: -5px;
+}
+
+#navbar #nrgt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nrgt #right {
+    width: 50px;
+    height: 40px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#main #dot {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    z-index: 999;
+    display: none;
+}
+
+#main #mlft {
+    width: 60%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+#mlft>h1:nth-child(1) {
+    font-size: 400px;
+    position: absolute;
+    top: -35%;
+    left: 30%;
+    color: #ebebeb;
+    letter-spacing: 25px;
+}
+
+#mlft>h1:nth-child(2) {
+    font-size: 400px;
+    position: absolute;
+    top: 42%;
+    left: -20%;
+    color: #ebebeb;
+    letter-spacing: 25px;
+}
+
+#mlft #line1 {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#line1 .line {
+    width: 2px;
+    height: 170px;
+    background-color: #F2F3F7;
+}
+
+.type h4 {
+    transform: rotate(-90deg);
+    margin-top: 35px;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.type .reddot {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: red;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#mlft #line2 {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 101%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#line2 .line {
+    width: 2px;
+    height: 100px;
+    background-color: #bebebe;
+}
+
+#line2 .reddot {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: red;
+    margin-top: 21px;
+    margin-left: 17px;
+}
+
+#mlft #line3 {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#line3 .line {
+    width: 2px;
+    height: 230px;
+    background-color: #bebebe;
+}
+
+#line3 h4 {
+    transform: rotate(0deg);
+    margin-top: 10px;
+    font-size: 8px;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+#line3 .reddot {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: red;
+    margin-top: -23px;
+    margin-left: -10px;
+}
+
+#mlft #line4 {
+    z-index: 99;
+    position: absolute;
+    bottom: 0;
+    left: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#line4 .line {
+    width: 2px;
+    height: 130px;
+    background-color: #bebebe;
+}
+
+#line4 h4 {
+    transform: rotate(0deg);
+    margin-bottom: -40px;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+#line4 .reddot {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: red;
+    margin-bottom: 30px;
+    margin-left: -10px;
+}
+
+#mlft #left-side {
+    width: 80px;
+    height: 50px;
+    /* background-color: red; */
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(90deg);
+    top: 50%;
+    left: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-side span {
+    color: red;
+}
+
+#left-side h5 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#left-side i {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#mlft #text {
+    position: absolute;
+    top: 32%;
+    left: 17%;
+    width: 62%;
+}
+
+#text h1 {
+    font-size: 60px;
+    line-height: 65px;
+    letter-spacing: 2px;
+}
+
+#text p {
+    width: 70%;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+
+#text button {
+    padding: 13px 40px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+#text button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#mlft #text2 {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    top: 44%;
+    left: 95%;
+    z-index: 9;
+}
+
+#text2 h1 {
+    font-size: 105px;
+    letter-spacing: 8px;
+    line-height: 100px;
+}
+
+#text2 h1:last-child {
+    color: #F10000;
+}
+
+#mlft #mbtm {
+    width: 100%;
+    height: 34vh;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mbtm #pic1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 60%;
+    background: linear-gradient(to right, #848688, #7E8182, #AFB1B3);
+}
+
+#pic1 #brave {
+    position: absolute;
+    left: 60%;
+    top: 20%;
+}
+
+#brave h1 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+#brave button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: none;
+}
+
+#pic1 img {
+    position: absolute;
+    top: -50px;
+    height: 133%;
+    margin-left: 50px;
+}
+
+#mbtm #pic2 {
+    position: absolute;
+    right: 0;
+    width: 35%;
+    height: 100%;
+    background-color: red;
+}
+
+#pic2 img {
+    height: 130%;
+    position: absolute;
+    right: 0;
+    top: -76px;
+}
+
+#pic2 #him {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+#him h1 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+#him button {
+    margin-top: 20px;
+    padding: 8px 15px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: none;
+}
+
+#main #mrgt {
+    width: 40%;
+    min-height: 100vh;
+    background-color: #E9EDF0;
+    position: relative;
+    overflow: hidden;
+}
+
+#mrgt h1 {
+    font-size: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: -44%;
+    color: #dddddd;
+    letter-spacing: 25px;
+}
+
+#mrgt img {
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    height: 98vh;
+}
